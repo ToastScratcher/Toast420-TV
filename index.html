@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ToastTV</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #000000; /* Black background */
+            color: white;
+        }
+        #loading-screen {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #main-content {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+        }
+        .start-btn {
+            background-color: #28a745; /* Green button */
+            color: white;
+            padding: 20px 40px;
+            font-size: 2rem;
+            border-radius: 15px;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+        }
+        .link-btn {
+            background-color: #ff5247;
+            color: white;
+            padding: 20px 40px;
+            font-size: 2rem;
+            text-decoration: none;
+            border-radius: 15px;
+            font-weight: bold;
+        }
+        h1 { font-size: 3.5rem; margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <h1>ToastTV📺</h1>
+        <button class="start-btn" onclick="startExperience()">Start</button>
+    </div>
+
+    <!-- Main Content -->
+    <div id="main-content">
+        <h1>ToastTV is now KexTv</h1>
+        <a href="https://toastscratcher.github.io/KexTV/" class="link-btn">Open KexTV</a>
+    </div>
+
+    <!-- Audio -->
+    <audio id="myAudio" loop>
+        <source src="The Official FIFA World Cup 26 Theme.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        function startExperience() {
+            // Hide loading, show main
+            document.getElementById('loading-screen').style.display = 'none';
+            document.getElementById('main-content').style.display = 'flex';
+            
+            // Play the fire track
+            document.getElementById('myAudio').play();
+        }
+    </script>
+
+</body>
+</html>
